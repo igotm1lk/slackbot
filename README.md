@@ -57,7 +57,8 @@ A Slack bot that analyzes website page speed performance using Google's PageSpee
 2. Click **"Create New Command"**
 3. Fill in:
    - **Command**: `/psi`
-   - **Request URL**: `https://your-ngrok-url.ngrok.io/slack/events` (use your ngrok URL)
+   - In **"Event Subscriptions"** (if enabled), set Request URL to the same
+      - **Requested URL**: `https://your-ngrok-url.ngrok.io/slack/events` (use your ngrok 'URL'/slack/events) and the verification test will pass
    - **Short Description**: `Analyze website page speed`
    - **Usage Hint**: `[url] [count] [strategy]`
 4. Click **"Save"**
@@ -170,33 +171,6 @@ The bot provides the following metrics:
 ### Additional Metrics
 - **Speed Index**: How quickly content is visually displayed
 - **Time to Interactive (TTI)**: Time until the page is fully interactive
-
-## Deployment to Slack
-
-### 1. Set ngrok account
-1. Go to Your Authtoken page
-2. Copy the Key
-3. On the bash past 'Set NGROK_AUTHTOKEN=$YOUR_AUTHTOKEN'
-
-
-
-### 2. Set Environment Variables
-
-```bash
-1. SLACK_BOT_TOKEN=xoxb-your-token
-2. SLACK_SIGNING_SECRET=your-secret
-3. PAGESPEED_API_KEY=your-api-key 
-```
-
-
-
-
-### 4. Update Slack App Settings
-
-1. Go to your Slack app settings
-2. Update the slash command Request URL to: 
-3. In **"Event Subscriptions"** (if enabled), set Request URL to the same
-
 
 ## License
 
